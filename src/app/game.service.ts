@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Game } from './game';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
 
-  private kalahGameUrl = 'https://4lwi8kbnbe.execute-api.us-east-1.amazonaws.com/Prod'
+  private kalahGameUrl = environment.backendUrl;
 
   constructor(
     private http: HttpClient) { }
