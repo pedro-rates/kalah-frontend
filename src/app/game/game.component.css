@@ -1,0 +1,91 @@
+mat-grid-tile {
+    background: lightblue;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -khtml-border-radius: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.small-pit:hover {
+    background-color: rgb(83, 180, 212);
+}
+
+.running {
+    color: black;
+}
+
+.main-game-div {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: white;
+    padding: 2vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-div {
+    background-color: rgb(241, 241, 241);
+    height: 100%;
+    overflow: hidden;
+}
+
+.game-details {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.game-buttons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+.buttons-td {
+    text-align: center;
+}
+
+.game-title {
+    font-weight: bold;
+    color: rgb(116, 138, 235);
+    font-size: xx-large;
+    text-align: center;
+}
+
+.table-title {
+    margin-bottom: 3vh;
+    font-size: large;
+}
+
+.table-info {
+    font-size: large;
+    font-weight: bold;
+}
+
+.example-button-row {
+    width: 6vw;
+    margin: 2px;
+}
+
+.mat-primary {
+    background-color: rgb(116, 138, 235);
+}
+
+.mat-loader {
+    color: blue;
+}
+
+.loader {
+    top: -25%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+}
+
+  

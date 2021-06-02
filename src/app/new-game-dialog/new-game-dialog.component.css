@@ -1,0 +1,10 @@
+.game-over-div {
+    text-align: center;
+    margin-top:10%;
+}
+
+.mat-primary {
+    background-color: rgb(116, 138, 235);
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,7 @@
+<div class="game-over-div">
+    <h1 mat-dialog-title>Game Over!</h1>
+    <h2 *ngIf="data.winner_condition; else elseBlock">{{ data.name }} is the Winner! Congratulations!</h2>
+    <ng-template #elseBlock><h2>This game was a Draw!</h2></ng-template>
+
+    <button mat-raised-button color="primary" (click)="onNewGameClick()">Start new game</button>
+</div>

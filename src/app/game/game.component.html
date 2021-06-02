@@ -1,0 +1,53 @@
+<div class="background-div">
+    <div class="main-game-div">
+        <h1 class="game-title">Welcome to Pedro Rates' Kalah Game</h1>
+        
+        <table class="game-details">
+            <td>
+                <tr class="table-title">
+                    Game Id
+                </tr>
+                <tr class="table-title">
+                    Game Status
+                </tr>
+                <tr class="table-title">
+                    Turn
+                </tr>
+            </td>
+            <td>
+                <tr class="table-info">
+                    {{game.gameId}}
+                </tr>
+                <tr class="table-info">
+                    {{game.gameStatus}}
+                </tr>
+                <tr class="table-info">
+                    {{game.turn}}
+                </tr>
+            </td>
+        </table>
+
+        <table class="game-buttons">
+            <td class="buttons-td">
+                <tr class="table-title">
+                    <div class="example-button-row">
+                        <button (click)="getGame()" mat-raised-button color="primary">New Game</button>
+                    </div>
+                </tr>
+            </td>
+        </table>
+
+            
+        
+        <mat-grid-list cols="8" rowHeight="1:1">
+            <mat-grid-tile [rowspan]="2" [ngClass]="{'running': isGameRunning()}" >{{game.pits[13]}}</mat-grid-tile>
+            <mat-grid-tile [ngClass]="{'small-pit': isGameRunning() && game.turn === 'PLAYER2', 'running': isGameRunning()}" *ngFor="let pit of game.pits.slice(7, 13).reverse(); let i = index"  
+                (click)="onSelect(12 - i)">{{pit}}</mat-grid-tile>
+            <mat-grid-tile [rowspan]="2" [ngClass]="{'running': isGameRunning()}">{{game.pits[6]}}</mat-grid-tile>
+            <mat-grid-tile [ngClass]="{'small-pit': isGameRunning() && game.turn === 'PLAYER1', 'running': isGameRunning()}" *ngFor="let pit of game.pits.slice(0, 6); let i = index"  (click)="onSelect(i)">{{pit}}</mat-grid-tile>
+            
+        </mat-grid-list>
+        <mat-spinner *ngIf="loading" class="loader" color="loader"></mat-spinner>
+    </div>
+</div>
+
